@@ -9,7 +9,7 @@
 
 <!--START_REPOS-->
 - [Arbuzov](https://github.com/Arbuzov/Arbuzov)
-- [mcp-atlassian-helm](https://github.com/Arbuzov/mcp-atlassian-helm)
+- [mcp-helm](https://github.com/Arbuzov/mcp-helm)
 - [hass-broadlink-ac-mqtt](https://github.com/Arbuzov/hass-broadlink-ac-mqtt)
 - [home_assistant_delonghi_primadonna](https://github.com/Arbuzov/home_assistant_delonghi_primadonna)
 - [home_assistant_xiaomi_tv](https://github.com/Arbuzov/home_assistant_xiaomi_tv)
