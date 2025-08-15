@@ -36,6 +36,7 @@ section {
   background: linear-gradient(135deg, #2980b9, #6dd5fa, #ffffff);
   color: #fff;
   position: relative;
+  transition: background 0.3s, color 0.3s;
 }
 
 body.dark .hero {
@@ -77,7 +78,7 @@ body.dark .hero {
   text-decoration: none;
   color: inherit;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
@@ -87,6 +88,7 @@ body.dark .hero {
 
 a {
   color: var(--accent);
+  transition: color 0.3s;
 }
 
 html {
