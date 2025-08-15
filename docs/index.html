@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт визитка</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сергей Арбузов — разработчик</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <img src="https://github.com/Arbuzov.png" alt="Avatar" class="avatar">
-        <h1>Арбузов Сергей</h1>
-        <p class="title">Разработчик</p>
-        <p><a href="mailto:info@whitediver.com">info@whitediver.com</a></p>
-        <div class="links">
-            <a href="https://github.com/Arbuzov">GitHub</a>
-            <a href="https://github.com/Arbuzov/Arbuzov">README</a>
-        </div>
+  <header class="hero">
+    <img src="https://github.com/Arbuzov.png" alt="Avatar" class="avatar">
+    <h1>Сергей Арбузов</h1>
+    <p class="tagline">Backend · IoT · Automation</p>
+    <button id="theme-toggle" aria-label="Сменить тему">🌙</button>
+  </header>
+
+  <section id="about">
+    <h2>Обо мне</h2>
+    <p>Я занимаюсь разработкой и автоматизацией, люблю умные устройства и открытый код.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Проекты</h2>
+    <div class="projects">
+      <a class="project-card" href="https://github.com/Arbuzov/compose-web-manager">
+        <h3>compose-web-manager</h3>
+        <p>Управление Docker Compose через веб-интерфейс.</p>
+      </a>
+      <a class="project-card" href="https://github.com/Arbuzov/home_assistant_oiot">
+        <h3>home_assistant_oiot</h3>
+        <p>Интеграция умных устройств в Home Assistant.</p>
+      </a>
+      <a class="project-card" href="https://github.com/Arbuzov/SmartCurtainBLE">
+        <h3>SmartCurtainBLE</h3>
+        <p>BLE модуль для управления шторами.</p>
+      </a>
     </div>
+  </section>
+
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p><a href="mailto:info@whitediver.com">info@whitediver.com</a></p>
+    <p><a href="https://github.com/Arbuzov">GitHub</a></p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
