@@ -3,46 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сергей Арбузов — разработчик</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Сергей Арбузов — backend, IoT и AI automation</title>
+  <meta name="description" content="Персональная страница Сергея Арбузова: backend-разработка, Home Assistant, IoT-интеграции, MCP и AI automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="hero">
-    <img src="https://github.com/Arbuzov.png" alt="Avatar" class="avatar">
-    <h1>Сергей Арбузов</h1>
-    <p class="tagline">Backend · IoT · Automation</p>
-    <button id="theme-toggle" aria-label="Переключить на тёмную тему" aria-pressed="false">🌙</button>
+    <nav class="topbar" aria-label="Основная навигация">
+      <a class="brand" href="#top">Arbuzov</a>
+      <div class="topbar-actions">
+        <a href="#projects">Проекты</a>
+        <a href="#experience">Экспертиза</a>
+        <a href="#contact">Контакты</a>
+        <button id="theme-toggle" aria-label="Переключить на тёмную тему" aria-pressed="false">🌙</button>
+      </div>
+    </nav>
+
+    <div class="hero-content" id="top">
+      <img src="https://github.com/Arbuzov.png" alt="Аватар Сергея Арбузова" class="avatar">
+      <div class="hero-copy">
+        <p class="eyebrow">Backend engineer · IoT integrator · AI automation builder</p>
+        <h1>Сергей Арбузов</h1>
+        <p class="lead">
+          Разрабатываю инструменты для автоматизации, интеграции для Home Assistant и проекты на стыке
+          AI-агентов, DevOps и умных устройств.
+        </p>
+        <div class="hero-badges" aria-label="Ключевые направления">
+          <span>Home Assistant</span>
+          <span>MCP / AI tooling</span>
+          <span>Python & TypeScript</span>
+          <span>Docker & automation</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/Arbuzov">GitHub</a>
+          <a class="button secondary" href="#projects">Смотреть проекты</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>Обо мне</h2>
-    <p>Я занимаюсь разработкой и автоматизацией, люблю умные устройства и открытый код.</p>
-  </section>
+  <main>
+    <section id="about">
+      <div class="section-heading">
+        <p class="section-kicker">Обо мне</p>
+        <h2>Делаю инженерные решения, которые экономят время и связывают системы между собой</h2>
+      </div>
+      <div class="about-grid">
+        <p>
+          Основной фокус — backend-разработка и автоматизация: от интеграций для умного дома до инструментов
+          для разработки, тестирования и управления инфраструктурой.
+        </p>
+        <p>
+          По вашим публичным репозиториям особенно заметны три направления: IoT/Home Assistant,
+          DevOps-практики и новые AI/MCP-инструменты для агентных сценариев.
+        </p>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Проекты</h2>
-    <div class="projects">
-      <a class="project-card" href="https://github.com/Arbuzov/compose-web-manager">
-        <h3>compose-web-manager</h3>
-        <p>Управление Docker Compose через веб-интерфейс.</p>
-      </a>
-      <a class="project-card" href="https://github.com/Arbuzov/home_assistant_oiot">
-        <h3>home_assistant_oiot</h3>
-        <p>Интеграция умных устройств в Home Assistant.</p>
-      </a>
-      <a class="project-card" href="https://github.com/Arbuzov/SmartCurtainBLE">
-        <h3>SmartCurtainBLE</h3>
-        <p>BLE модуль для управления шторами.</p>
-      </a>
-    </div>
-  </section>
+    <section id="experience">
+      <div class="section-heading">
+        <p class="section-kicker">Экспертиза</p>
+        <h2>Ключевые направления</h2>
+      </div>
+      <div class="pillars">
+        <article class="pillar-card">
+          <h3>IoT и Home Assistant</h3>
+          <p>Интеграции для бытовых устройств, датчиков, ТВ, кофе-машин и кастомной автоматики.</p>
+        </article>
+        <article class="pillar-card">
+          <h3>AI и MCP tooling</h3>
+          <p>Инструменты для агентных workflows, расширения возможностей LLM и автоматизации рабочих процессов.</p>
+        </article>
+        <article class="pillar-card">
+          <h3>DevOps и self-hosted automation</h3>
+          <p>Docker, Compose, Ansible и утилиты для управления сервисами и домашней инфраструктурой.</p>
+        </article>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Контакты</h2>
-    <p><a href="mailto:info@whitediver.com">info@whitediver.com</a></p>
-    <p><a href="https://github.com/Arbuzov">GitHub</a></p>
-  </section>
+    <section id="projects">
+      <div class="section-heading section-heading-inline">
+        <div>
+          <p class="section-kicker">Проекты</p>
+          <h2>Избранные репозитории</h2>
+        </div>
+        <div class="filters" aria-label="Фильтр проектов">
+          <button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">Все</button>
+          <button class="filter-chip" type="button" data-filter="iot" aria-pressed="false">IoT</button>
+          <button class="filter-chip" type="button" data-filter="ai" aria-pressed="false">AI / MCP</button>
+          <button class="filter-chip" type="button" data-filter="devops" aria-pressed="false">DevOps</button>
+        </div>
+      </div>
+
+      <div class="projects" id="project-list">
+        <a class="project-card" data-category="ai" href="https://github.com/Arbuzov/claude-kit">
+          <span class="project-type">AI automation</span>
+          <h3>claude-kit</h3>
+          <p>Набор материалов и сценариев для работы с AI-агентами и инженерной автоматизацией.</p>
+        </a>
+
+        <a class="project-card" data-category="iot" href="https://github.com/Arbuzov/home_assistant_delonghi_primadonna">
+          <span class="project-type">Home Assistant</span>
+          <h3>home_assistant_delonghi_primadonna</h3>
+          <p>Интеграция кофе-машины Delonghi с Home Assistant для домашней автоматизации.</p>
+        </a>
+
+        <a class="project-card" data-category="iot" href="https://github.com/Arbuzov/home_assistant_oiot">
+          <span class="project-type">Home Assistant</span>
+          <h3>home_assistant_oiot</h3>
+          <p>Подключение облачного счётчика воды OIOT к домашнему контуру мониторинга и сценариев.</p>
+        </a>
+
+        <a class="project-card" data-category="iot" href="https://github.com/Arbuzov/home_assistant_xiaomi_tv">
+          <span class="project-type">Home Assistant</span>
+          <h3>home_assistant_xiaomi_tv</h3>
+          <p>Кастомная интеграция Xiaomi TV для управления и автоматизации мультимедийных сценариев.</p>
+        </a>
+
+        <a class="project-card" data-category="ai" href="https://github.com/Arbuzov/mcp-helm">
+          <span class="project-type">MCP</span>
+          <h3>mcp-helm</h3>
+          <p>Эксперименты и инструменты вокруг MCP-подхода для оркестрации и интеграции AI-инструментов.</p>
+        </a>
+
+        <a class="project-card" data-category="devops" href="https://github.com/Arbuzov/compose-web-manager">
+          <span class="project-type">DevOps</span>
+          <h3>compose-web-manager</h3>
+          <p>Веб-интерфейс для управления Docker Compose и self-hosted сервисами.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="signals">
+      <div class="section-heading">
+        <p class="section-kicker">Что видно по репозиториям</p>
+        <h2>Ваш профиль разработчика</h2>
+      </div>
+      <div class="signals-grid">
+        <article class="signal-card">
+          <strong>Инженер-практик</strong>
+          <p>Проекты решают конкретные задачи: управление устройствами, интеграция сервисов и упрощение инфраструктуры.</p>
+        </article>
+        <article class="signal-card">
+          <strong>Сильный фокус на automation</strong>
+          <p>Во многих репозиториях повторяется идея убрать ручные операции и завернуть процессы в понятный интерфейс или API.</p>
+        </article>
+        <article class="signal-card">
+          <strong>Широкий стек</strong>
+          <p>Python, TypeScript, Docker и прикладные интеграции формируют хороший фундамент для backend и platform engineering задач.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-heading">
+        <p class="section-kicker">Контакты</p>
+        <h2>Открыт к интересным инженерным задачам</h2>
+      </div>
+      <div class="contact-card">
+        <a href="mailto:info@whitediver.com">info@whitediver.com</a>
+        <a href="https://github.com/Arbuzov">github.com/Arbuzov</a>
+        <a href="https://arbuzov.github.io/">arbuzov.github.io</a>
+      </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
