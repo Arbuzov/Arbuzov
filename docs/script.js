@@ -2,6 +2,8 @@ const toggle = document.getElementById('theme-toggle');
 const savedTheme = localStorage.getItem('theme');
 const filterButtons = document.querySelectorAll('.filter-chip');
 const projectCards = document.querySelectorAll('.project-card');
+const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+const initialIsDark = savedTheme ? savedTheme === 'dark' : prefersDark;
 
 const applyThemeState = (isDark) => {
   document.body.classList.toggle('dark', isDark);
@@ -10,11 +12,22 @@ const applyThemeState = (isDark) => {
   toggle.setAttribute('aria-label', isDark ? 'Переключить на светлую тему' : 'Переключить на тёмную тему');
 };
 
-applyThemeState(savedTheme === 'dark');
+applyThemeState(initialIsDark);
 
-if (!savedTheme) {
-  toggle.setAttribute('aria-pressed', 'false');
-}
+const applyProjectFilter = (activeFilter) => {
+  filterButtons.forEach((chip) => {
+    const isActive = chip.dataset.filter === activeFilter;
+    chip.classList.toggle('active', isActive);
+    chip.setAttribute('aria-pressed', String(isActive));
+  });
+
+  projectCards.forEach((card) => {
+    const matches = activeFilter === 'all' || card.dataset.category === activeFilter;
+    card.hidden = !matches;
+  });
+};
+
+applyProjectFilter(document.querySelector('.filter-chip.active')?.dataset.filter || 'all');
 
 toggle.addEventListener('click', () => {
   const isDark = !document.body.classList.contains('dark');
@@ -24,16 +37,6 @@ toggle.addEventListener('click', () => {
 
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    const activeFilter = button.dataset.filter;
-
-    filterButtons.forEach((chip) => {
-      chip.classList.toggle('active', chip === button);
-      chip.setAttribute('aria-selected', String(chip === button));
-    });
-
-    projectCards.forEach((card) => {
-      const matches = activeFilter === 'all' || card.dataset.category === activeFilter;
-      card.hidden = !matches;
-    });
+    applyProjectFilter(button.dataset.filter);
   });
 });
