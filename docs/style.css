@@ -394,7 +394,7 @@ body.dark .hero {
   }
 
   section {
-    width: min(100% - 24px, 1120px);
+    width: min(calc(100% - 24px), 1120px);
     padding-bottom: 56px;
   }
 
