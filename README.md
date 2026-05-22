@@ -2,7 +2,7 @@
 
 Backend / IoT / Automation engineer. Делаю интеграции, автоматизацию и инструменты, которые связывают устройства, сервисы и инфраструктуру в один рабочий контур.
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Arbuzov)](https://github.com/Arbuzov)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Arbuzov&theme=radical)](https://github.com/Arbuzov)
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Arbuzov&show_icons=true&theme=radical)](https://github.com/Arbuzov)
 
 ## Чем я занимаюсь
